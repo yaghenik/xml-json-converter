@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="10"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="controller.ConverterController">
+
+    <padding>
+        <Insets top="15" right="15" bottom="15" left="15"/>
+    </padding>
+
+    <Label text="XML ⇄ JSON Converter" style="-fx-font-size:16;" />
+
+    <TextArea fx:id="inputArea"
+              promptText="Input XML or JSON"
+              prefHeight="120"/>
+
+    <HBox spacing="10">
+        <Button text="XML → JSON (API)" onAction="#xmlToJsonApi"/>
+        <Button text="JSON → XML (API)" onAction="#jsonToXmlApi"/>
+    </HBox>
+
+    <HBox spacing="10">
+        <Button text="XML → JSON (Manual)" onAction="#xmlToJsonManual"/>
+        <Button text="JSON → XML (Manual)" onAction="#jsonToXmlManual"/>
+    </HBox>
+
+    <TextArea fx:id="outputArea"
+              promptText="Result"
+              prefHeight="120"/>
+
+</VBox>
